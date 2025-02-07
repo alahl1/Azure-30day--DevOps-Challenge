@@ -1,0 +1,6 @@
+azure-identity
+azure-mgmt-storage
+azure-mgmt-synapse
+azure-storage-blob
+python-dotenv
+requests
