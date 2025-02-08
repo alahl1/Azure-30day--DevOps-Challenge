@@ -9,12 +9,14 @@ This repository contains:
 
 ## Project Folder Structure
 - **AzureDataLake/**
+    - `Instructions` → Folder with steps
+      - `Instructions.md` → Documentation for the project
   - `.env` → Environment variables file
   - `setup_nba_data_lake.py` → Main script for setting up the data lake
   - `azure_resources.py` → Script for creating Azure resources
   - `data_operations.py` → Script for fetching data and uploading it
-  - `Instructions.md` → Documentation for the project
   - `requirements.txt` → Python dependencies
+  - `.gitignore` → Ignores .env and Instructions folder
 
 # AWS to Azure Translation
 
@@ -64,11 +66,11 @@ brew install python
 ```
 
 ```bash
-pip install azure-storage-blob python-dotenv requests
+python3 -m ensurepip --default-pip
 ```
 
 ```bash
-pip install azure-identity azure-mgmt-resource azure-mgmt-storage azure-mgmt-synapse
+pip install azure-identity azure-mgmt-resource azure-mgmt-storage azure-mgmt-synapse azure-storage-blob python-dotenv requests
 ```
 
 - Install dependencies
@@ -93,10 +95,12 @@ Add:
 - Your Azure Subscription ID
 - Create a unqiue Azure Resource Group Name
 - Create a unique storage account name
+- Create a unique synapse workspace name
 - The Azure Connection String & Synapse SQL endpoint will be injected, leave this blank.
+- Create an admin username
 
 # Step 3: Run setup_nba_data_lake.py file
-1. In the CLI (Command Line Interface), type
+1.  In the Bash terminal, type
 ```bash
 python setup_nba_data_lake.py
 ```
