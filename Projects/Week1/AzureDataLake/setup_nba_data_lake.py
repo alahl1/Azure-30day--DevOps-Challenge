@@ -12,7 +12,7 @@ def main():
     location = os.getenv("AZURE_LOCATION")
     storage_account_name = os.getenv("AZURE_STORAGE_ACCOUNT")
     subscription_id = os.getenv("AZURE_SUBSCRIPTION_ID")
-    workspace_name = "nba-synapse-workspace"
+    workspace_name = os.getenv("SYNAPSE_WORKSPACE_NAME")
 
     # Step 1: Create Azure resources
     print("Creating Azure resources...")
