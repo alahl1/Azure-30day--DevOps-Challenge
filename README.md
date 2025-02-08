@@ -5,18 +5,10 @@ This repo has the resources you need to learn Azure and complete some cool hands
 
 If you are new to Azure, start by following this [2025 Cloud Computing Roadmap](https://dev.to/devabdul/cloud-computing-roadmap-2025-3030)
 
-If you are here for the [AzureDevOpsAllStarChallenge](https://youtu.be/myhe0LXpCeo) you can check out
-- [introduction](bootcamp/introduction.md)
-- [software needed](bootcamp/software.md)
+If you are here for the [AzureDevOpsAllStarChallenge](https://www.youtube.com/@millionairemillennials) you can check out
+- [projects](Projects)
 
-
-For more applied learning:
-- Check out the [projects](projects.md) section for more hands-on examples!
-- Check out the [interviews](interviews.md) section for more advice on how to pass data engineering interviews!
-- Check out the [books](books.md) section for a list of high quality data engineering books
-- Check out the [communities](communities.md) section for a list of high quality data engineering communities to join
-- Check out the [newsletter](newsletters.md) section to learn via email 
-
+Please feel free to recommend and contribute to this resource list as you learn, network and grow. 
 
 ## Resources
 
@@ -28,7 +20,7 @@ For more applied learning:
 ### Azure Ecosystem:
 - [All Azure Services](https://azurecharts.com/overview)
 
-### Great [list of over 25 books](books.md)
+### Books:
 
 Top 3 must read books are:
 - [Azure Cloud Computing and Development Fundamentals](https://www.amazon.com/Fundamentals-Data-Engineering-Robust-Systems/dp/1098108302/)
@@ -36,7 +28,7 @@ Top 3 must read books are:
 - [Learn Azure in a Month of Lunches](https://www.amazon.com/Learn-Azure-Month-Lunches-Foulds/dp/1617295175/ref=sr_1_4?crid=3LNTPXKW5MFDQ&keywords=Learn+Azure+in+a+Month+of+Lunches&qid=1688392843&sprefix=learn+azure+in+a+month+of+lunches+%2Caps%2C279&sr=8-4)
 
 
-### Great [list of over 10 communities to join](communities.md):
+### Discord Communities:
 
 Top must-join discord communities for Azure:
 - [Microsoft Azure Discord](https://discord.com/invite/microsoft-azure-681328802814492704)
@@ -84,7 +76,7 @@ Top must-join communities for AI/ML:
 
 ## Social Media Accounts
 
-Here's the mostly comprehensive list of data engineering creators: 
+Here's a list of Azure Creators: 
 **(You have to have at least 5k followers somewhere to be added!)**
 
 | Name                 | <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" width="50"/><br/> YouTube | <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="50" height="50"/> <br/> LinkedIn | <img src="https://icon2.cleanpng.com/20240402/kzp/transparent-x-logo-woman-black-and-white-photography-street-fa-woman-in-dark-clothing-walking-determinedly660c4b50383a25.14507568.webp" width="50"><br/> X/Twitter | <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="50"> <br/> Instagram | <img src="https://icon2.cleanpng.com/20240214/kxl/transparent-tiktok-logo-tiktok-logo-blue-and-pink-lettering-re-retro-style-tiktok-logo-evoking-1950s-1710878265139.webp" width="50"> <br/> TikTok |
@@ -104,7 +96,7 @@ Here's the mostly comprehensive list of data engineering creators:
 - [Azure & Devops Podcast](https://azuredevopspodcast.clear-measure.com/)
 
 
-### Great [list of 20+ newsletters](newsletters.md)
+### Newletters
 
 Top must follow newsletters for data engineering:
 - [Azure Weekly](https://azureweekly.info/)
@@ -112,3 +104,6 @@ Top must follow newsletters for data engineering:
 
 ### Glossaries:
 - [Azure Glossary](https://docs.azure.cn/en-us/azure-glossary-cloud-terminology)
+
+### Whitepapers:
+- [Azure Whitepapers](https://turbo360.com/whitepapers)
