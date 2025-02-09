@@ -84,7 +84,7 @@ pip install azure-identity azure-mgmt-resource azure-mgmt-storage azure-mgmt-syn
 1. Sign into your Azure account, [video](https://www.youtube.com/watch?v=kAbKjr3geW4)/[documentation](https://code.visualstudio.com/docs/azure/gettingstarted#:~:text=Select%20the%20Azure%20icon%20in,services%20right%20from%20VS%20Code.) for help
 2. Clone the repo
 ```bash
-git clone [https://github.com/alahl1/SportsDataBackup](https://github.com/alahl1/Azure-30day--DevOps-Challenge)
+git clone https://github.com/alahl1/Azure-30day--DevOps-Challenge
 cd Projects
 cd Week1
 cd AzureDataLake
