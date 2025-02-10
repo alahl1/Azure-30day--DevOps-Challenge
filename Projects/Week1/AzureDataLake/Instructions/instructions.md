@@ -6,8 +6,6 @@ This repository contains:
 - .env, which contains your environment variables and shout be added to .gitignore
 
 ## **Project Structure**
-
-## Project Folder Structure
 - **AzureDataLake/**
     - `Instructions` → Folder with steps
       - `Instructions.md` → Documentation for the project
@@ -17,6 +15,10 @@ This repository contains:
   - `data_operations.py` → Script for fetching data and uploading it
   - `requirements.txt` → Python dependencies
   - `.gitignore` → Ignores .env and Instructions folder
+ 
+## **Technical Diagram**
+![AzureNBADataLake](https://github.com/user-attachments/assets/82543fe4-8512-466c-9a18-4d6c8a925589)
+
 
 # AWS to Azure Translation
 
