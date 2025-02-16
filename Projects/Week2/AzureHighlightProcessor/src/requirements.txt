@@ -2,4 +2,5 @@ requests
 azure-storage-blob
 azure-identity
 azure-mgmt-storage
+azure.mgmt.resource
 python-dotenv
