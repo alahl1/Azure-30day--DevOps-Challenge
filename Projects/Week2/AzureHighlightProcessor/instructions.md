@@ -140,11 +140,22 @@ This will first excute create_storage_account.py, based on your wait_time_betwee
 Next it runs fetch.py to fetch the highlights from RapidAPI and uploads the JSON file to the Blob Storage.
 Finally it will run process_one_video.py to download the JSON file and process the video URL, download the video and upload it back to Blob Storage.
 
-Optional - Confirm there is a JSON file is uploaded to the container
-Optional - Confirm there is a video uploaded to the container
+Optional - Confirm there is a JSON file and video is uploaded to the container
+```bash
+az storage blob list \
+    --account-name <YOUR_STORAGE_ACCOUNT_NAME> \
+    --container-name <YOUR_CONTAINER_NAME> \
+    --query "[].{name:name}" \
+    --output table
+```
 
 ### **What We Learned**
-1. 
+1. Using Microsoft Entra ID (formerly Azure AD) to manage and uathnticate permissions
+2. Azure CLI to manage cloud resources from the terminal
+3. Storage in Azure (Storage Account, blob container) - with a folder like structure
+4. Upload and download files in Azure
 
 ### **Future Enhancements**
-1. 
+1. Deploy to Azure VM or Function App for automated execution
+2. Process more than 1 video and store in the Azure Blob
+3. Use Managed Identity instead of Storage Account Key for stronger security
