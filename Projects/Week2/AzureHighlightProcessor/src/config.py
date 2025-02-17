@@ -1,10 +1,9 @@
-# config.py
-
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Force reloading of environment variables from the .env file,
+# even if they are already set in the environment.
+load_dotenv(override=True)
 
 ###################################
 # RapidAPI & Fetch-Related Config
