@@ -1,9 +1,11 @@
-#AzureGameHighlightProcessor
+# Azure Game Highlight Processor - Terraform
 
 # HighlightProcessor
 This project uses RapidAPI to obtain NCAA game highlights, stores the json file in an Azure Blob and then parses the json file for a video url and downloads the video to the same Azure Storage Blob.
 
 # File Overview
+
+## Python Files
 
 .env file stores all over the environment variables, these are variables that we don't want to hardcode into our script.
 
@@ -42,7 +44,7 @@ Runs the command terraform output -json to capture the newly provisioned resourc
 
 Updates the corresponding entries in the .env file so that the Python scripts use the latest resource values.
 
-Terraform Files
+## Terraform Files
 
 main.tf performs the following actions:
 
@@ -106,18 +108,24 @@ in the CLI to return the subscription id.
 
 ## **Project Structure**
 ```bash
-src/
-├── Dockerfile
-├── config.py
-├── fetch.py
-├── create_storage_account.py
-├── process_one_video.py
-├── requirements.txt
-├── run_all.py
-├── .env
-├── .gitignore
+├── .env                      # Environment variables for app configuration
+├── .gitignore                # Files/directories to ignore in Git
+├── README.md                 # Project overview and instructions
+├── requirements.txt          # Python dependencies (e.g., requests, azure-storage-blob, etc.)
+├── Dockerfile                # Container build instructions
+├── src/                      # Application source code
+│   ├── config.py             # Loads environment variables and builds the Azure connection string
+│   ├── fetch.py              # Fetches highlights from RapidAPI and uploads JSON to Azure Blob Storage
+│   ├── process_one_video.py  # Downloads JSON, extracts video URL, downloads video, and uploads it to Blob Storage
+│   ├── run_all.py            # Orchestrates running fetch.py and process_one_video.py sequentially with retry logic
+│   └── update_env.py         # Updates the .env file with Terraform outputs automatically
+└── terraform/                # Terraform configuration for provisioning Azure resources
+    ├── main.tf               # Defines Azure resource group, storage account, and blob container
+    ├── variables.tf          # Declares variables for Terraform configuration
+    ├── outputs.tf            # Outputs the storage account name, primary key, and container name
+    └── terraform.tfvars      # For variable values 
 ```
-![AzureHighlightProcessor (1)](https://github.com/user-attachments/assets/7dff7f2c-4386-4f22-ab64-c7e0a5b06895)
+![TFAzureHighlightProcessor (1)](https://github.com/user-attachments/assets/d504c26c-e392-4d0d-af03-12287c3e5975)
 
 # AWS to Azure Translation
 
@@ -137,21 +145,26 @@ AWS MediaConvert functionality that enhances the video/audio quality was removed
 # START HERE - Local
 ## **Step 1: Clone The Repo**
 ```bash
-git clone https://github.com/alahl1/Azure-30day--DevOps-Challenge/tree/main/Projects/Week2/AzureHighlightProcessor
+git clone https://github.com/alahl1/Azure-30day--DevOps-Challenge/tree/main/Projects/Week3/AzureHighlightProcessorTerraform/src
 cd src
 ```
 ## **Step 2: Update .env file**
 1. RAPIDAPI_KEY
 2. AZURE_SUBSCRIPTION_ID
 3. AZURE_RESOURCE_GROUP
-4. AZURE_BLOB_CONTAINER_NAME
 
 ## **Step 3: Secure .env file**
 ```bash
 chmod 600 .env
 ```
 
-## **Step 4: Setup Python Virtual Environment**
+## **Step 4: Update terraform.tfvars**
+1. subscription_id
+2. resource_group_name
+3. storage_account_name
+4. container_name       
+
+## **Step 5: Setup Python Virtual Environment**
 macOS/Linux
 ```bash
 python3 -m venv venv
@@ -164,21 +177,49 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-## **Step 5: Install Project Dependencies**
+## **Step 6: Install Project Dependencies**
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## **Step 6: Locally Run The Project**
+## **Step 7: Provision Azure Infrastructure with Terraform**
+```bash
+terraform init
+```
+
+```bash
+terraform plan
+```
+
+```bash
+terraform apply
+```
+
+Type "yes" when prompted
+
+## **Step 8: Update .env file automatically**
+```bash
+python update_env.py
+```
+This script will update the following variables in your .env:
+
+1. AZURE_STORAGE_ACCOUNT_NAME
+2. AZURE_STORAGE_ACCOUNT_KEY
+3. AZURE_BLOB_CONTAINER_NAME
+
+
+## **Step 9: Execute The Data Processing Pipeline**
 Run:
 ```bash
 python run_all.py
 ```
            
-This will first excute create_storage_account.py, based on your wait_time_between_scripts settings it will wait a few seconds.
-Next it runs fetch.py to fetch the highlights from RapidAPI and uploads the JSON file to the Blob Storage.
-Finally it will run process_one_video.py to download the JSON file and process the video URL, download the video and upload it back to Blob Storage.
+This script will:
+
+Run fetch.py: Fetch highlights from the API and upload the JSON file to Azure Blob Storage.
+Wait for resources to stabilize.
+Run process_one_video.py: Download the JSON file, extract the video URL, download the video, and upload it to Azure Blob Storage.
 
 Optional - Confirm there is a JSON file and video is uploaded to the container
 ```bash
@@ -190,12 +231,15 @@ az storage blob list \
 ```
 
 ### **What We Learned**
-1. Using Microsoft Entra ID (formerly Azure AD) to manage and uathnticate permissions
-2. Azure CLI to manage cloud resources from the terminal
-3. Storage in Azure (Storage Account, blob container) - with a folder like structure
-4. Upload and download files in Azure
+1. Terraform workflow:
+           - Initialization (terraform init): Downloading providers and setting up the working directory
+           - Planning (terraform plan): Previewing changes before applying them
+           - Applying (terraform apply): Creating or updating resources in Azure
+2. Integrating Terraform outputs with other automation scripts (like update_env.py) to automatically update configuration files
+3. Idempotency - ensuring that running the same configuration repeatedly leads to the same resource state
+4. Parameterizing configurations to make deployments flexible and reusable across different environments
 
 ### **Future Enhancements**
-1. Deploy to Azure VM or Function App for automated execution
-2. Process more than 1 video and store in the Azure Blob
-3. Use Managed Identity instead of Storage Account Key for stronger security
+1. Automate updating the Azure Subscription ID from the terraform variabel file 
+2. Deploy the containers to an orchestration platform (Azure Container Instances) for improved scalability and management
+3. Automate the Terraform provisioning and .env update as part of the deployment pipeline
