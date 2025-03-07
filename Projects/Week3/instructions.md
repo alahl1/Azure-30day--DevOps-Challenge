@@ -110,15 +110,12 @@ in the CLI to return the subscription id.
 ```bash
 ├── .env                      # Environment variables for app configuration
 ├── .gitignore                # Files/directories to ignore in Git
-├── README.md                 # Project overview and instructions
 ├── requirements.txt          # Python dependencies (e.g., requests, azure-storage-blob, etc.)
-├── Dockerfile                # Container build instructions
-├── src/                      # Application source code
-│   ├── config.py             # Loads environment variables and builds the Azure connection string
-│   ├── fetch.py              # Fetches highlights from RapidAPI and uploads JSON to Azure Blob Storage
-│   ├── process_one_video.py  # Downloads JSON, extracts video URL, downloads video, and uploads it to Blob Storage
-│   ├── run_all.py            # Orchestrates running fetch.py and process_one_video.py sequentially with retry logic
-│   └── update_env.py         # Updates the .env file with Terraform outputs automatically
+├── config.py             # Loads environment variables and builds the Azure connection string
+├── fetch.py              # Fetches highlights from RapidAPI and uploads JSON to Azure Blob Storage
+├── process_one_video.py  # Downloads JSON, extracts video URL, downloads video, and uploads it to Blob Storage
+├── run_all.py            # Orchestrates running fetch.py and process_one_video.py sequentially with retry logic
+├── update_env.py         # Updates the .env file with Terraform outputs automatically
 └── terraform/                # Terraform configuration for provisioning Azure resources
     ├── main.tf               # Defines Azure resource group, storage account, and blob container
     ├── variables.tf          # Declares variables for Terraform configuration
