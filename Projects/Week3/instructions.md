@@ -103,9 +103,6 @@ az account show --query id -o tsv
 ```
 in the CLI to return the subscription id.
 
-// STOPPED EDITING HERE ///
-
-
 ## **Project Structure**
 ```bash
 ├── .env                      # Environment variables for app configuration
