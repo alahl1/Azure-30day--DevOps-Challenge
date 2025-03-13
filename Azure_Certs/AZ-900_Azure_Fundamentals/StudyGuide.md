@@ -23,35 +23,33 @@ If you're new to cloud computing, focus on understanding fundamental concepts be
 #### 1.2.1 Technical Documentation
 - **Microsoft Learn AZ-900 Learning Path**  
   [Microsoft Learn AZ-900](https://learn.microsoft.com/en-us/certifications/exams/az-900/)
-- **Azure Fundamentals Documentation**  
+- **Azure Documentation**  
   [Azure Docs](https://learn.microsoft.com/en-us/azure/)
 
 #### 1.2.2 Video Tutorials
 - **Microsoft Learn YouTube Playlist**  
   [Microsoft Learn YouTube](https://www.youtube.com/c/MicrosoftLearn)
 - **John Savill's AZ-900 Crash Course**  
-  [Watch Here](https://www.youtube.com/watch?v=h0jJw9aOAzI)
+  [Watch Here](https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3)
 
 #### 1.2.3 Hands-On Practice
 - **Azure Free Tier (12-Month Free Account)**  
   [Sign Up](https://azure.microsoft.com/en-us/free/)
 - **Microsoft’s AZ-900 Lab Exercises**  
-  [Practice Labs](https://microsoftlearning.github.io/AZ-900T0x-MicrosoftAzureFundamentals/)
+  [Practice Labs](https://k21academy.com/microsoft-azure/az-900/az-900-microsoft-azure-fundamental-training-step-by-step-activity-guides-hands-on-lab-exercise/)
 
 #### 1.2.4 Practice Tests
 - **Microsoft Practice Assessments (Official)**  
-  [Practice Tests](https://learn.microsoft.com/en-us/certifications/resources/)
+  [Practice Tests](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification)
 
 ### 1.3 Paid Learning Resources
 #### 1.3.1 Paid Video Courses
 - **Udemy: AZ-900 Exam Prep by Scott Duffy**  
   [Udemy Course](https://www.udemy.com/course/az900-azure/)
-- **Pluralsight: AZ-900 Course**  
-  [Pluralsight](https://www.pluralsight.com/paths/microsoft-azure-fundamentals)
+- **Pluralsight: Microsoft Azure Fundamentals (AZ-900): Foundational Cloud Concepts**  
+  [Pluralsight](https://www.pluralsight.com/courses/microsoft-azure-fundamentals-az-900-foundational-cloud-concepts)
 
 #### 1.3.2 Paid Practice Tests
-- **MeasureUp Official Practice Test**  
-  [MeasureUp](https://www.measureup.com/Microsoft-Azure-Fundamentals-AZ-900.html)
 - **Udemy AZ-900 Practice Tests**  
   [Udemy Practice Tests](https://www.udemy.com/course/az900-azure-practice-tests/)
 
@@ -70,14 +68,10 @@ If you already understand cloud concepts via AWS, focus on mapping AWS services 
 #### 2.2.1 AWS-to-Azure Service Mapping
 - **Microsoft’s AWS vs. Azure Service Mapping Guide**  
   [Service Mapping](https://docs.microsoft.com/en-us/azure/architecture/aws-professional/)
-- **Azure for AWS Professionals Learning Path**  
-  [Learn More](https://learn.microsoft.com/en-us/training/paths/migrate-aws-azure/)
 
 #### 2.2.2 Video Tutorials
 - **Azure Fundamentals for AWS Professionals**  
-  [Watch Here](https://www.youtube.com/watch?v=yJbtNRmO7xA)
-- **John Savill’s AWS vs. Azure Deep Dive**  
-  [Comparison Video](https://www.youtube.com/watch?v=mChU4tC7XnM)
+  [Watch Here](https://www.youtube.com/watch?v=QT7d6gCYMCc)
 
 #### 2.2.3 Hands-On Practice
 - **Azure Free Account**  
@@ -89,13 +83,7 @@ If you already understand cloud concepts via AWS, focus on mapping AWS services 
 (Same as Beginner Section)
 
 ### 2.3 Paid Learning Resources
-#### 2.3.1 Paid Video Courses
-- **Cloud Academy: Azure for AWS Professionals**  
-  [Cloud Academy](https://cloudacademy.com/)
-- **Udemy: AZ-900 Exam Prep for AWS Users**  
-  [Udemy Course](https://www.udemy.com/course/az900-for-aws-users/)
-
-#### 2.3.2 Paid Practice Tests
+#### 2.3.1 Paid Practice Tests
 (Same as Beginner Section)
 
 ---
