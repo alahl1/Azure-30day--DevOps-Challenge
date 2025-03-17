@@ -16,17 +16,15 @@ import json
 import subprocess
 import os
 
-def get_terraform_outputs(terraform_dir):
+def get_terraform_outputs(terraform_dir=None):
     """
-    Executes 'terraform output -json' and returns the parsed JSON outputs.
+    Executes 'terraform output -json' in the specified directory and returns the parsed JSON outputs.
     """
     try:
         # Change to the Terraform directory
         original_dir = os.getcwd()
         if terraform_dir:
             os.chdir(terraform_dir)
-        else:
-            terraform_dir = os.getcwd()
         
         # Run the terraform command to get outputs as JSON.
         result = subprocess.check_output(["terraform", "output", "-json"])
