@@ -16,17 +16,29 @@ import json
 import subprocess
 import os
 
-def get_terraform_outputs():
+def get_terraform_outputs(terraform_dir=None):
     """
-    Executes 'terraform output -json' and returns the parsed JSON outputs.
+    Executes 'terraform output -json' in the specified directory and returns the parsed JSON outputs.
     """
     try:
+        # Change to the Terraform directory
+        original_dir = os.getcwd()
+        if terraform_dir:
+            os.chdir(terraform_dir)
+        
         # Run the terraform command to get outputs as JSON.
         result = subprocess.check_output(["terraform", "output", "-json"])
         outputs = json.loads(result.decode())
+        
+        # Change back to the original directory
+        os.chdir(original_dir)
+
         return outputs
     except subprocess.CalledProcessError as e:
         print(f"Error retrieving Terraform outputs: {e}")
+        return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
         return None
 
 def update_env_file(outputs):
@@ -71,6 +83,6 @@ def update_env_file(outputs):
     print(f"  AZURE_BLOB_CONTAINER_NAME={container_name}")
 
 if __name__ == "__main__":
-    outputs = get_terraform_outputs()
+    outputs = get_terraform_outputs('./terraform')
     if outputs:
         update_env_file(outputs)
