@@ -31,6 +31,8 @@ If you're new to cloud computing, focus on understanding fundamental concepts be
   [Microsoft Learn YouTube](https://www.youtube.com/c/MicrosoftLearn)
 - **John Savill's AZ-900 Crash Course**  
   [Watch Here](https://www.youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3)
+- **AZ-900 | Microsoft Azure Fundamentals Full Course, Free Practice Testst YouTube Playlist**  
+  [https://www.youtube.com/playlist?list=PLGjZwEtPN7j-Q59JYso3L4_yoCjj2syrM)
 
 #### 1.2.3 Hands-On Practice
 - **Azure Free Tier (12-Month Free Account)**  
